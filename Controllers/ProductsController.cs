@@ -114,7 +114,7 @@ namespace FarmAppApi.Controllers
 
         // GET: api/Products/5
         [HttpGet("{id:int}/pharmacies")]
-        public async Task<ActionResult<List<Pharmacy>>> GetProductPharmacies(int id)
+        public async Task<ActionResult<IEnumerable<Pharmacy>>> GetProductPharmacies(int id)
         {
 
             var productPharmacies = await dbContext.PharmacyProducts.Where(s => s.IdProduct == id)
