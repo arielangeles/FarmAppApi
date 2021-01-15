@@ -64,6 +64,7 @@ namespace FarmAppApi.Controllers
                 {
                     Id = p.IdPharmacyBranch,
                     Name = p.PharmacyName,
+                    Schedule = p.Schedule,
                     PharmacyChain = p.IdPharmacyChainNavigation.PharmacyName,
                     Address = p.AddressName,
                     PhoneNumber = p.PhoneNumber,
