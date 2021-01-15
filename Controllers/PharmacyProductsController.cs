@@ -25,7 +25,6 @@ namespace FarmAppApi.Controllers
         public async Task<ActionResult<IEnumerable<PharmacyProduct>>> GetPharmacyProducts()
         {
             return await dbContext.PharmacyProducts
-                //.Include(pp => pp.IdPharmacyBranchNavigation)
                 .Include(pp => pp.IdProductNavigation)
                 .ToListAsync();
         }

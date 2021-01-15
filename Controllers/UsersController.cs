@@ -143,7 +143,7 @@ namespace FarmAppApi.Controllers
                 Gender = userPerson.Gender,
                 EmailAddress = userPerson.EmailAddress,
                 PhoneNumber = userPerson.PhoneNumber,
-                HomeAddress = userPerson.HomeAddress
+                HomeAddress = userPerson.HomeAddress,
             };
 
             dbContext.People.Add(person);
@@ -161,7 +161,7 @@ namespace FarmAppApi.Controllers
             dbContext.Users.Add(user);
             await dbContext.SaveChangesAsync();
 
-            return CreatedAtAction("GetUser", new { id = user.IdUser }, user);
+            return Ok(userPerson);
         }
 
         // DELETE: api/Users/5
