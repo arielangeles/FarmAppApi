@@ -178,6 +178,7 @@ namespace FarmAppApi.Controllers
             await dbContext.SaveChangesAsync();
 
             return NoContent();
+
         }
 
         private bool UserExists(int id)
